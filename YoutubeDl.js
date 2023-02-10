@@ -1,4 +1,6 @@
 const makeWASocket = require("@adiwajshing/baileys").default;
+const express = require("express")
+const PORT = process.env.PORT || 9000
 const {handleAudio} = require("./ytaudio")
 const {handleVideo} = require("./ytvideo")
 const {
@@ -6,6 +8,14 @@ const {
   useMultiFileAuthState,
 } = require("@adiwajshing/baileys");
 // start a connection
+const app = express()
+app.listen(PORT, ()=>{
+  console.log(`Server running on port ${PORT}`)
+})
+
+app.get("/", (req, res)=>{
+  res.send("🎶Youtube DL Bot🎶")
+})
 const startSock = async () => {
 const { version } = await fetchLatestBaileysVersion();
 const { state, saveCreds } = await useMultiFileAuthState("auth_info_multi");
