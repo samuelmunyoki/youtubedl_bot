@@ -1,4 +1,5 @@
 const makeWASocket = require("@adiwajshing/baileys").default;
+const express  = require("express")
 const {handleAudio} = require("./ytaudio")
 const {handleVideo} = require("./ytvideo")
 const {
@@ -20,7 +21,13 @@ var mimetype;
 var body;
 var command;
 var requests_today = 0;
-
+const PORT = process.env.PORT || 8000
+const app = express()
+app.listen(PORT, (req, req)=>{
+  console.log("Server Running")
+})
+  
+app.get("/", (req, res)=>{res.send("YoutubeDL running")})
   sock.ev.on("messages.upsert", async ({ messages }) => {
     let m = messages[0];
     if (m.message != undefined && m.message != null) {
