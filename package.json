@@ -24,15 +24,15 @@
   "homepage": "https://github.com/samuelmunyoki/youtubedl_bot#readme",
   "dependencies": {
     "@adiwajshing/baileys": "=5.0.0",
-    "axios": "^1.3.2",
-    "cheerio": "^1.0.0-rc.12",
-    "file-type": "^16.5.3",
-    "form-data": "^4.0.0",
-    "jsdom": "^21.1.0",
-    "node-fetch": "^2.6.9",
+    "axios": "=1.3.2",
+    "cheerio": "=1.0.0-rc.12",
+    "file-type": "=16.5.3",
+    "form-data": "=4.0.0",
+    "jsdom": "=21.1.0",
+    "node-fetch": "=2.6.9",
     "nodemon": "=2.0.20",
     "qrcode-terminal": "=0.12.0",
-    "qs": "^6.11.0",
-    "yt-search": "^2.10.4"
+    "qs": "=6.11.0",
+    "yt-search": "=2.10.4"
   }
 }
