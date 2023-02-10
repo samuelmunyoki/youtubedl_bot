@@ -1,6 +1,4 @@
 const makeWASocket = require("@adiwajshing/baileys").default;
-const express = require("express")
-const PORT = process.env.PORT || 9000
 const {handleAudio} = require("./ytaudio")
 const {handleVideo} = require("./ytvideo")
 const {
