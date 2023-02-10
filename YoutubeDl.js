@@ -29,7 +29,7 @@ var requests_today = 0;
       if (m.key.fromMe == false) {
         if (m.key.remoteJid.split("@")[1] !== "g.us") {
           console.log("Inbox")
-          sock.sendMessage(m.key.remoteJid, { text: "Use in group only!"}, {quoted: m})
+          sock.sendMessage(m.key.remoteJid, { text: "Please create a group and add this Bot. For use in group only!"}, {quoted: m})
         }else{
           mimetype = 
           Object.keys(m.message) == "imageMessage"
