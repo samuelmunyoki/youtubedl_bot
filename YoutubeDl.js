@@ -13,7 +13,7 @@ app.listen(PORT, ()=>{
   console.log(`Server running on port ${PORT}`)
 })
 
-app.get("/", (req, req)=>{
+app.get("/", (req, res  )=>{
   res.send("🎶Youtube DL Bot🎶")
 })
 const startSock = async () => {
