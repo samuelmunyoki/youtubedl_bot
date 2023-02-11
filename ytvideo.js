@@ -8,7 +8,7 @@ module.exports = {
                 let info = results.videos[0]
                 if (!info.liveStream) {
                     let url = info.url;
-                    let capdata =`💿 *Title*: ${info.title}\n🤹🏾‍♀️ *Author*: ${info.author.name}\n⏲️ *Duration*: ${info.duration.timestamp} Minutes\n😀 *Views*: ${info.views}\n⬆️ *Released*: ${info.ago}\n📕 *Description*: ${info.description}\n\n🎧 *Downloading video* ... `;
+                    let capdata =`💿 *Title*: ${info.title}\n🤹🏾‍♀️ *Author*: ${info.author.name}\n⏲️ *Duration*: ${info.duration.timestamp} Minutes\n😀 *Views*: ${info.views}\n⬆️ *Released*: ${info.ago}\n📕 *Description*: ${info.description}\n\n*YouTube On WhatsApp*\nhttps://chat.whatsapp.com/DAHh7Zhivoc19BMiE8C9mf\n\n🎧 *Downloading video* ... `;
                     sock.sendMessage(m.key.remoteJid, {image: {url: info.thumbnail}, caption: capdata}, {quoted: m}).then(()=>{
                         ytv(url).then((res)=>{
                             sock.sendMessage(
