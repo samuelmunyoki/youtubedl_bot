@@ -9,7 +9,7 @@ module.exports = {
                 console.log(info)
                 if (!info.liveStream) {
                     let url = info.url;
-                    let capdata =`💿 *Title*: ${info.title}\n🤹🏾‍♀️ *Author*: ${info.author.name}\n⏲️ *Duration*: ${info.duration.timestamp} Minutes\n😀 *Views*: ${info.views}\n⬆️ *Released*: ${info.ago}\n📕 *Description*: ${info.description}\n\n🚀 Total Requests: ${reg_no}\n\n🎧 *Downloading Audio* ... `;
+                    let capdata =`💿 *Title*: ${info.title}\n🤹🏾‍♀️ *Author*: ${info.author.name}\n⏲️ *Duration*: ${info.duration.timestamp} Minutes\n😀 *Views*: ${info.views}\n⬆️ *Released*: ${info.ago}\n📕 *Description*: ${info.description}\n\n🚀 Total Requests: ${reg_no}\n*YouTube On WhatsApp*\nhttps://chat.whatsapp.com/DAHh7Zhivoc19BMiE8C9mf\n\n🎧 *Downloading Audio* ... `;
                     sock.sendMessage(m.key.remoteJid, {image: {url: info.thumbnail}, caption: capdata}, {quoted: m}).then(()=>{
                         yta(url).then((res)=>{
                             sock.sendMessage(
