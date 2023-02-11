@@ -1,4 +1,9 @@
 const makeWASocket = require("@adiwajshing/baileys").default;
+const express = require("exoress")
+const PORT  = process.env.PORT || 9000;
+const app = express()
+app.listen(PORT)
+app.get("/", (req, res)=>{res.send("YouTube Bot")})
 const {handleAudio} = require("./ytaudio")
 const {handleVideo} = require("./ytvideo")
 const {
