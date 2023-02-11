@@ -30,7 +30,8 @@ app.listen(PORT, (req, res)=>{
 app.get("/", (req, res)=>{res.send("YoutubeDL running")})
   sock.ev.on("messages.upsert", async ({ messages }) => {
     let m = messages[0];
-    if (m.message != undefined && m.message != null) {
+    if(m.type === 'notify') {
+      if (m.message != undefined && m.message != null) {
       if (m.key.fromMe == false) {
         if (m.key.remoteJid.split("@")[1] !== "g.us") {
           console.log("Inbox")
@@ -86,6 +87,9 @@ app.get("/", (req, res)=>{res.send("YoutubeDL running")})
         }
       }
     }
+    
+    }
+    
   });
 
   // sock.ev.on('message-receipt.update', m => console.log(m))
